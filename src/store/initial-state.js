@@ -1,3 +1,3 @@
-const items = []
+const items = {}
 
 export default items
