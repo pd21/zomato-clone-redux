@@ -10,20 +10,22 @@ export const CardContainer = styled.div`
 export const CardItemContainer = styled.div`
     width: 267px;
     height: 320px;
-    margin: 0px 10.5px 10px 0px;
+    margin: 0px 7.5px 20px 0px;
     background-image: url(${props => props.imgUrl});
     background-size: cover;
     position: relative;
     border-radius: 8px;
+    cursor: pointer;
 
-    &:last-child{
-        margin: 0px 0px 10px 0px;
+    &:last-child {
+        margin: 0px 0px 20px 0px;
     }
 `
 export const CardOpaqueEffect = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
+    border-radius: 8px;
     background: rgba(0,0,0,0.5);
 `
 export const CardTitle = styled.div`

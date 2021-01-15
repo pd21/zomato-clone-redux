@@ -6,7 +6,6 @@ export default function(state=getInitialState(), action){
     }
 
     if (action.type === 'LOAD_CITY_DATA') {
-        console.log('state now', state)
         return {
             ...state,
             data : action.value,

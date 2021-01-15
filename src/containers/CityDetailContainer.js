@@ -11,8 +11,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getCityData() {
             dispatch(showLoader())
-
-            axios.get('http://localhost:8000/api/v1/city/bengaluru')
+            const cityName = window.location.pathname.split('/')[1]
+            axios.get(`http://localhost:8000/api/v1/city/${cityName}`)
                 .then(res => {
                     dispatch(loadCityData(res.data))
 
