@@ -21,8 +21,6 @@ class City extends React.Component{
     render(){
         const { showLoader } = this.props
         const cityName = window.location.pathname.split('/')[1]
-
-        console.log('props', this.props)
         return (
             <MainContainer>
                 <BackgroundContainer>

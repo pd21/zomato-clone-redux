@@ -3,10 +3,15 @@ export const loadCityData = value => ({
     value
 })
 
-export const showLoader = () => ({
+export const loadRestaurantCollectionData = value => ({
+    type: 'LOAD_RESTAURANT_COLLECTION_DATA',
+    value
+})
+
+export const showLoaderData = () => ({
     type: 'SHOW_LOADER'
 })
 
-export const hideLoader = () => ({
+export const hideLoaderData = () => ({
     type: 'HIDE_LOADER'
 })

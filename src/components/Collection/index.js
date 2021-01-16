@@ -12,7 +12,7 @@ import Card from '../Card'
 
 class Collection extends React.Component{
     render(){
-        const { showLoader, collections } = this.props
+        const { showLoader, collections, getListOfRestaurants, cityId } = this.props
         const cityName = window.location.pathname.split('/')[1]
         return(
             <CollectionContainer>
@@ -20,12 +20,20 @@ class Collection extends React.Component{
                 <CollectionSubtitleContainer>
                     <CollectionSubtitle>
                         Explore curated lists of top restaurants, cafes, pubs, and bars in {cityName}, based on trends
-                       </CollectionSubtitle>
+                    </CollectionSubtitle>
                     <AllCollectionTitle href='/'>
                         All collections in {cityName}
                     </AllCollectionTitle>
                 </CollectionSubtitleContainer>
-                {!showLoader && collections && <Card data={collections} />}
+                {
+                    !showLoader && collections && 
+                    <Card 
+                        data={collections} 
+                        getListOfRestaurants={getListOfRestaurants} 
+                        cityId={cityId}
+                        cityName={cityName}
+                    />
+                }
             </CollectionContainer>
         )
     }
