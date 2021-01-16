@@ -19,11 +19,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getListOfRestaurants(city_id,collection_id) {
+        getListOfRestaurants(city_id, collection_id, collection_title, collection_imgUrl) {
             dispatch(showLoaderData())
             axios.get(`${FETCH_RESTAURANTS_COLLECTION}${city_id}/${collection_id}`)
                 .then(res => {
-                    dispatch(loadRestaurantCollectionData(res.data))
+                    dispatch(loadRestaurantCollectionData(res.data, collection_title, collection_imgUrl))
                     dispatch(hideLoaderData())
                 })
                 .catch(err => {

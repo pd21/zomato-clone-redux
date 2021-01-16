@@ -3,7 +3,10 @@ import axios from 'axios'
 import RestaurantCollection from '../components/RestaurantCollection'
 
 const mapStateToProps = (state) => {
-    return state
+    return {
+        restaurantCollection: state && state.data && state.data.restaurantCollection,
+        collectionDetail: state && state.data && state.data.collectionDetail,
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
