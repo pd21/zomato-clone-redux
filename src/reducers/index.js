@@ -9,10 +9,9 @@ export default function(state=getInitialState(), action){
     }
 
     if (action.type === 'LOAD_RESTAURANT_COLLECTION_DATA'){
-        const restaurantCollection = action.value
-        state.data.restaurantCollection = restaurantCollection
+        state.data.restaurantCollection = action.value
         return {
-            state
+            ...state,
         }
     }
 
