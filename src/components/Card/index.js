@@ -8,10 +8,6 @@ import {
 } from './style'
 
 class Card extends React.Component{
-    constructor(props) {
-        super(props)
-    }
-
     render(){
         const { data } = this.props
         const cardData = data && data.slice(0,8)

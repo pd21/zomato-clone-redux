@@ -1,6 +1,6 @@
 import React from 'react'
-import Collection from '../Collection'
-import Cuisine from '../Cuisine'
+import CollectionContainer from '../../containers/CollectionContainer'
+import CuisineContainer from '../../containers/CuisineContainer'
 
 import {
     MainContainer,
@@ -14,19 +14,15 @@ import {
 } from './style'
 
 class City extends React.Component{
-    constructor(props){
-        super(props)
-    }
-
     componentDidMount(){
         this.props.getCityData()
     }
 
     render(){
-        const { showLoader, data} = this.props
-        const establishment = data && data[2].cuisines
-        const cityName = data && data[0].locationSuggestions.name
-        console.log('est', establishment)
+        const { showLoader } = this.props
+        const cityName = window.location.pathname.split('/')[1]
+
+        console.log('props', this.props)
         return (
             <MainContainer>
                 <BackgroundContainer>
@@ -37,8 +33,8 @@ class City extends React.Component{
                     </TitleContainer>
                 </BackgroundContainer>
                 <SubContainer>
-                    {!showLoader && <Collection data={data} showLoader={showLoader} cityName={cityName}/>}
-                    {!showLoader && <Cuisine data={establishment} cityName={cityName}/>}
+                    {!showLoader && <CollectionContainer />}
+                    {!showLoader && <CuisineContainer />}
                 </SubContainer>
             </MainContainer>
         )

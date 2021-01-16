@@ -11,12 +11,9 @@ import {
 import Card from '../Card'
 
 class Collection extends React.Component{
-    constructor(props) {
-        super(props)
-    }
-
     render(){
-        const { showLoader, data, cityName } = this.props
+        const { showLoader, collections } = this.props
+        const cityName = window.location.pathname.split('/')[1]
         return(
             <CollectionContainer>
                 <CollectionTitle>Collections</CollectionTitle>
@@ -28,7 +25,7 @@ class Collection extends React.Component{
                         All collections in {cityName}
                     </AllCollectionTitle>
                 </CollectionSubtitleContainer>
-                {!showLoader && data && <Card data={data && data[1].collections} />}
+                {!showLoader && collections && <Card data={collections} />}
             </CollectionContainer>
         )
     }

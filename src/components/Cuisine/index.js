@@ -8,19 +8,15 @@ import {
 } from './style'
 
 class Cuisine extends React.Component{
-    constructor(props) {
-        super(props)
-    }
-
     render(){
-        console.log('here is the prop', this.props)
-        const { data, cityName} = this.props
+        const { cuisines } = this.props
+        const cityName = window.location.pathname.split('/')[1]
         return(
             <Main>
             <Title>Popular cuisines in and around {cityName}</Title>
             <EstablishmentContainer>
                 {
-                    data && data.map(item => {
+                    cuisines && cuisines.map(item => {
                         return(
                             <EstablishmentItemContainer>
                                 {item.cuisine.cuisine_name}
