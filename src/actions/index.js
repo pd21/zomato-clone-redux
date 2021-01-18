@@ -3,11 +3,12 @@ export const loadCityData = value => ({
     value,
 })
 
-export const loadRestaurantCollectionData = (value,title,imgUrl) => ({
+export const loadRestaurantCollectionData = (value,title,imgUrl,description) => ({
     type: 'LOAD_RESTAURANT_COLLECTION_DATA',
     value,
     title,
     imgUrl,
+    description,
 })
 
 export const showLoaderData = () => ({

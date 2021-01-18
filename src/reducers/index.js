@@ -13,6 +13,7 @@ export default function(state=getInitialState(), action){
         state.data.collectionDetail = {
             title : action.title,
             imgUrl: action.imgUrl,
+            description: action.description,
         }
         return {
             ...state,

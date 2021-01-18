@@ -9,12 +9,18 @@ import {
 } from './style'
 
 class Card extends React.Component{
-    handleClickCard = (city_id, collection_id, collection_title, collection_imgUrl) => {
+    handleClickCard = (city_id, collection_id, collection_title, collection_imgUrl,collection_description) => {
         const { cityName} = this.props;
         const collectionTitle = collection_title.split(' ').join('-')
 
         this.props.history.push(`/${cityName}/${collectionTitle}`)
-        this.props.getListOfRestaurants(city_id, collection_id, collection_title, collection_imgUrl)
+        this.props.getListOfRestaurants(
+            city_id, 
+            collection_id,
+            collection_title,
+            collection_imgUrl,
+            collection_description
+        )
     }
     render(){
         const { data, cityId} = this.props
@@ -31,7 +37,8 @@ class Card extends React.Component{
                                     cityId,
                                     item.collection.collection_id,
                                     item.collection.title,
-                                    item.collection.image_url
+                                    item.collection.image_url,
+                                    item.collection.description,
                                 )}
                             >
                                 <CardOpaqueEffect></CardOpaqueEffect>
