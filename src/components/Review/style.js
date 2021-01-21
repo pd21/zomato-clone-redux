@@ -8,7 +8,8 @@ export const Name = styled.div`
     color: rgb(28, 28, 28);
     margin: 0px;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
 `
 export const Subtitle = styled.div`
     margin-top: 10px;
@@ -16,6 +17,7 @@ export const Subtitle = styled.div`
     margin-bottom: 40px;
     line-height: 1.5;
     color: rgb(54, 54, 54);
+    font-family: 'Questrial', sans-serif;
 `
 export const UserReviewContent = styled.div`
     border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -35,6 +37,7 @@ export const UserName = styled.div`
     line-height: 44px;
     margin-left: 10px;
     color: rgb(54, 54, 54);
+    font-family: 'Questrial', sans-serif;
 `
 export const Star = styled.div`
     display: flex;
@@ -52,11 +55,12 @@ export const ReviewTime = styled.div`
     color: rgb(156, 156, 156);
 `
 export const Text = styled.div`
-    line-height: 1.5;
+    line-height: 1.8;
     margin: 5px 0px 20px;
     color: rgb(105, 105, 105);
     overflow-wrap: break-word;
     font-size: 16px;
+    font-family: 'Questrial', sans-serif;
 `
 
 export const RatingStars = styled.div`

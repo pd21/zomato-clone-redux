@@ -12,19 +12,21 @@ export const RestaurantImage = styled.div`
     width: 100%;
     background-image: url('${props => props.imageUrl}');
     background-size: cover;
-    background-position: center;
+    background-position: center 10%;
+
 `
 export const RestaurantTitle = styled.div`
     line-height: 1.2;
     color: rgb(28, 28, 28);
     margin-top: 10px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 36px;
+    font-family: 'Bodoni Moda', serif;
 `
 export const Locality = styled.div`
     font-size: 16px;
     color: rgb(156, 156, 156);
-    margin: 5px 0px;
+    margin: 10px 0px;
     font-weight: 500;
 `
 export const Timing = styled.div`
@@ -48,10 +50,12 @@ export const SectionOverview = styled.div`
 
 export const Section = styled.section`
     position: sticky;
-    border-bottom: 2px solid rgb(130, 130, 130); 
+    border-bottom: 2px solid rgb(237, 90, 107,0.2); 
     top:0px;
     background-color: #fff;
     cursor: pointer;
+    font-weight: 600;
+    font-family: 'Questrial', sans-serif;
 `
 export const RestaurantReview = styled.div`
     padding: 20px;
@@ -68,19 +72,23 @@ export const Overview = styled.div`
 export const AboutRestaurant = styled.div`
     margin-top: 20px;
     margin-bottom: 80px;
+    font-family: 'Questrial', sans-serif;
 `
 export const AboutTitle = styled.div`
     line-height: 1.2;
     color: rgb(28, 28, 28);
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
 `
 export const Title = styled.div`
     line-height: 1.2;
     font-weight: 400;
     color: rgb(28, 28, 28);
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 550;
 `
 export const Cuisine = styled.div`
     display: flex;
@@ -98,6 +106,9 @@ export const CuisineItem = styled.div`
     margin-right: 10px;
     border-radius: 59px;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 `
 export const AverageCost = styled.div`
     margin-top: 10px;
