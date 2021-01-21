@@ -10,9 +10,10 @@ export const CollectionListContainer = styled.div`
 `
 export const BannerContainer = styled.div`
     position: relative;
-    background-image:url(${props => props.imgUrl});
+    background-image: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/01/31/14/table.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     max-width: 100%;
     height: 320px;
@@ -30,21 +31,25 @@ export const Section = styled.div`
     position: absolute;
     color: #fff;
     padding:0 20px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
 `
 export const BannerTitle = styled.div`
     font-size: 52px;;
     line-height: 1.2;
+    font-weight: 500;
+    font-family: 'Bodoni Moda', serif;
 `
 export const BannerDescription = styled.div`
     font-size: 22px;
     line-height: 1.5;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 550;
 `
 export const ResultsFound = styled.div`
     margin-top:13px;
     margin-bottom: 30px;
     font-size:18px;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 550;
 `
 
 export const SectionRestaurants = styled.div`

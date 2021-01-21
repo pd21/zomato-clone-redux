@@ -6,7 +6,6 @@ import {
     BannerOpaqueEffect,
     BannerTitle,
     Section,
-    BannerDescription,
     ResultsFound,
     SectionRestaurants
 } from './style';
@@ -15,24 +14,33 @@ import Navbar from '../Navbar'
 import RestaurantCard from '../RestaurantCard'
 
 class RestaurantCollection extends React.Component{
+
+
+    componentDidMount() {
+        const city_id = window.location.pathname.split('/')[2]
+        const collection_id = window.location.pathname.split('/')[4]
+        this.props.getListOfRestaurants(city_id,collection_id)
+    }
+
+
     render(){
-        const { collectionDetail, restaurantCollection, getRestaurantDetails} = this.props
-        const collectionData = restaurantCollection && restaurantCollection.collectionData
+        console.log('props', this.props)
+        const collectionName = window.location.pathname.split('/')[3]
+        const collectionData = this.props && this.props.data && this.props.data.collectionData
         return(
             <RestaurantCollectionContainer>
                 <Navbar />
-                {collectionDetail && restaurantCollection &&
+                {collectionData &&
                     <CollectionListContainer>
-                        <BannerContainer imgUrl={collectionDetail.imgUrl}>
+                        <BannerContainer>
                             <BannerOpaqueEffect></BannerOpaqueEffect>
                             <Section>
-                                <BannerTitle>{collectionDetail.title}</BannerTitle>
-                                <BannerDescription>{collectionDetail.description}</BannerDescription>
-                                <ResultsFound>{collectionData.results_shown} Place(s)</ResultsFound>
+                                <BannerTitle>{collectionName}</BannerTitle>
+                                <ResultsFound>{collectionData.restaurants.length} places (s)</ResultsFound>
                             </Section>
                         </BannerContainer>
                         <SectionRestaurants>
-                        <RestaurantCard restaurants={collectionData.restaurants} getRestaurantDetails={getRestaurantDetails}/>
+                        <RestaurantCard restaurants={collectionData.restaurants} />
                         </SectionRestaurants>
                     </CollectionListContainer>
                 }

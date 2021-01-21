@@ -2,31 +2,29 @@ import { connect } from 'react-redux'
 import axios from 'axios'
 import RestaurantCollection from '../components/RestaurantCollection'
 
-import { loadRestaurantData, showLoaderData, hideLoaderData} from '../actions'
+import { loadRestaurantCollectionData, showLoaderData, hideLoaderData} from '../actions'
 
-import { FETCH_RESTAURANTS_DETAILS } from '../constants/api'
+import {
+    FETCH_RESTAURANTS_COLLECTION
+} from '../constants/api'
 
 const mapStateToProps = (state) => {
-    return {
-        restaurantCollection: state && state.data && state.data.restaurantCollection,
-        collectionDetail: state && state.data && state.data.collectionDetail,
-    }
+    return state
 }
-
 const mapDispatchToProps = (dispatch) => {
     return {
-        getRestaurantDetails(restaurant_id){
+        getListOfRestaurants(city_id,collection_id) {
             dispatch(showLoaderData())
-
-            axios.get(`${FETCH_RESTAURANTS_DETAILS}${ restaurant_id}`)
+            axios.get(`${FETCH_RESTAURANTS_COLLECTION}${city_id}/${collection_id}`)
                 .then(res => {
-                    dispatch(loadRestaurantData(res.data))
+                    dispatch(loadRestaurantCollectionData(res.data))
                     dispatch(hideLoaderData())
                 })
                 .catch(err => {
                     console.log('oops err', err)
                 })
         }
+        
     }
 }
 

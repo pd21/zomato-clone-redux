@@ -24,6 +24,7 @@ export const Main = styled.div`
     margin-right: 14px;
     margin-bottom: 30px;
     width: 261px;
+    font-family: 'Questrial', sans-serif;
 `
 
 export const Details = styled.div`

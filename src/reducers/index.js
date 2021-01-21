@@ -9,14 +9,9 @@ export default function(state=getInitialState(), action){
     }
 
     if (action.type === 'LOAD_RESTAURANT_COLLECTION_DATA'){
-        state.data.restaurantCollection = action.value
-        state.data.collectionDetail = {
-            title : action.title,
-            imgUrl: action.imgUrl,
-            description: action.description,
-        }
         return {
             ...state,
+            data: action.value
         }
     }
 

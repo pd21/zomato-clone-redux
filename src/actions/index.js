@@ -3,12 +3,9 @@ export const loadCityData = value => ({
     value,
 })
 
-export const loadRestaurantCollectionData = (value,title,imgUrl,description) => ({
+export const loadRestaurantCollectionData = (value) => ({
     type: 'LOAD_RESTAURANT_COLLECTION_DATA',
     value,
-    title,
-    imgUrl,
-    description,
 })
 
 export const loadRestaurantData = (value) => ({

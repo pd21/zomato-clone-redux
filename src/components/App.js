@@ -9,10 +9,10 @@ class App extends React.Component{
   render(){
     return(
       <div className="App">
-        <Route path='/' exact render = {()=> <Redirect to='/Ranchi'/>}/>
+        <Route path='/' exact render={() => <Redirect to='/Bengaluru'/>}/>
         <Route path='/:city' exact component={CityDetailContainer} />
-        <Route path='/:city/:collectionName' exact component={RestaurantCollectionContainer} />
-        <Route path='/:city/restaurant/:restaurantName' exact component={RestaurantDetailContainer} />
+        <Route path='/:city/:cityId/:collectionName/:collectionId' exact component={RestaurantCollectionContainer} />
+        <Route path='/:city/restaurant/:restaurantId' exact component={RestaurantDetailContainer} />
       </div>
     )
   }

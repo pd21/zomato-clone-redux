@@ -13,14 +13,14 @@ class Card extends React.Component{
         const { cityName} = this.props;
         const collectionTitle = collection_title.split(' ').join('-')
 
-        this.props.history.push(`/${cityName}/${collectionTitle}`)
-        this.props.getListOfRestaurants(
-            city_id, 
-            collection_id,
-            collection_title,
-            collection_imgUrl,
-            collection_description
-        )
+        this.props.history.push(`/${cityName}/${city_id}/${collectionTitle}/${collection_id}`)
+        // this.props.getListOfRestaurants(
+        //     city_id, 
+        //     collection_id,
+        //     collection_title,
+        //     collection_imgUrl,
+        //     collection_description
+        // )
     }
     render(){
         const { data, cityId} = this.props
