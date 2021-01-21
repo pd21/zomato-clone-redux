@@ -11,6 +11,16 @@ export const loadRestaurantCollectionData = (value,title,imgUrl,description) => 
     description,
 })
 
+export const loadRestaurantData = (value) => ({
+    type: 'LOAD_RESTAURANT_DATA',
+    value,
+})
+
+export const loadReviewData = (value) => ({
+    type: 'LOAD_REVIEW_DATA',
+    value,
+})
+
 export const showLoaderData = () => ({
     type: 'SHOW_LOADER'
 })

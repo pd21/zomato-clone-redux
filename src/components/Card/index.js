@@ -24,7 +24,6 @@ class Card extends React.Component{
     }
     render(){
         const { data, cityId} = this.props
-        console.log('props here', this.props)
         const cardData = data && data.slice(0,8)
         return(
             <CardContainer>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 
 import {
     RestaurantCardContainer,
@@ -14,16 +15,20 @@ import {
 } from './style'
 
 class RestaurantCard extends React.Component{
+
+    handleClickRestaurantCard = (restaurant_id,restaurant_name) => {
+        const cityName = window.location.pathname.split('/')[1]
+        this.props.history.push(`/${cityName}/restaurant/${restaurant_id}`)
+    }
+
     render(){
-        console.log('restaurant props', this.props)
         const { restaurants } = this.props
         return(
             <RestaurantCardContainer>
                 {
                     restaurants && restaurants.map(item => {
                         return(
-                            <Main>
-                                {console.log('featured', item.restaurant.featured_image)}
+                            <Main onClick={() => this.handleClickRestaurantCard(item.restaurant.id, item.restaurant.name)}>
                                 <RestaurantContent imageUrl={item.restaurant.thumb}>
                                 </RestaurantContent>
                                 <Details>
@@ -45,4 +50,4 @@ class RestaurantCard extends React.Component{
     }
 }
 
-export default RestaurantCard
+export default withRouter(RestaurantCard)

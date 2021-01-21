@@ -22,7 +22,7 @@ export const RestaurantContent = styled.div`
 `
 export const Main = styled.div`
     margin-right: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     width: 261px;
 `
 
@@ -54,9 +54,15 @@ export const NumberOfRating = styled.span`
 export const Locality = styled.div`
     margin: 5px 0px;
     font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 14px;
+    font-weight: 400;
 `
 export const Cuisines = styled.div`
-    font-size: 10px;
+    font-size: 12px;
+    color: rgb(79, 79, 79);
+    line-height: 14px;
+    font-weight: 400;
 `
 export const CardRating = styled.i`
     margin-right: 8px;

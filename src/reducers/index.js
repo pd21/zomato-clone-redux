@@ -20,6 +20,20 @@ export default function(state=getInitialState(), action){
         }
     }
 
+    if (action.type === 'LOAD_RESTAURANT_DATA') {
+        return {
+            ...state,
+            data : action.value,
+        }
+    }
+
+    if (action.type === 'LOAD_REVIEW_DATA') {
+        state.data.reviewData = action.value.reviewData
+        return {
+            ...state,
+        }
+    }
+
     if(action.type === 'SHOW_LOADER') {
         return {
             ...state,
