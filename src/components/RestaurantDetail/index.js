@@ -35,7 +35,7 @@ class RestaurantDetail extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            reviewActive : true,
+            reviewActive : false,
             restaurant_id: window.location.pathname.split('/')[3],
         }
     }
@@ -78,12 +78,12 @@ class RestaurantDetail extends React.Component{
                                 <Opening>Timing</Opening><Time>- {restaurantData.timings} </Time>
                             </Timing>
                             <SectionOverview>
-                                <Overview onClick={()=> this.handleClickOverview()}>
+                            <Overview onClick={() => this.handleClickOverview()} active={reviewActive}>
                                     Overview
-                                </Overview>
-                                <RestaurantReview onClick={()=> this.handleClickReview()}>
+                            </Overview>
+                            <RestaurantReview onClick={() => this.handleClickReview()} active={reviewActive}>
                                     Reviews
-                                </RestaurantReview>
+                            </RestaurantReview>
                             </SectionOverview>
                         </Section>    
                         {!reviewActive && 
@@ -109,7 +109,7 @@ class RestaurantDetail extends React.Component{
                                             restaurantData.highlights.map(item=>{
                                                 return(
                                                     <HighlightInfoItem>
-                                                        <InfoIcon className="far fa-grin-stars"></InfoIcon>
+                                                        <InfoIcon className="fas fa-grin-stars"></InfoIcon>
                                                         {item}
                                                     </HighlightInfoItem>
                                                 )

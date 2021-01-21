@@ -37,11 +37,11 @@ class Review extends React.Component{
                                     <UserName>{item.review.user.name}</UserName>
                             </UserProfileContent>
                             <Star>
-                                {/* <RatingStars>{getRating(item.review.rating)}</RatingStars> */}
-                                <Rating>{item.review.rating}.0</Rating>
+                                <RatingStars>{getRating(item.review.rating)}</RatingStars>
+                                    <Rating>{item.review.rating.toFixed(1)}</Rating>
                                 <ReviewTime>{item.review.review_time_friendly}</ReviewTime>
                             </Star>
-                            <Text>{item.review.rating_text}</Text>
+                                <Text>{item.review.review_text}</Text>
 
                         </UserReviewContent>
                         )

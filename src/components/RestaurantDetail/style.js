@@ -44,8 +44,6 @@ export const Time = styled.span`
 export const SectionOverview = styled.div`
   display: flex;
   font-size: 18px;
-  font-weight: bold;
-  color: rgb(237, 90, 107);
 `
 
 export const Section = styled.section`
@@ -58,11 +56,13 @@ export const Section = styled.section`
 export const RestaurantReview = styled.div`
     padding: 20px;
     cursor: pointer;
+    color: ${props => props.active ? `rgb(237, 90, 107)` : `rgb(105, 105, 105);`};
 `
 
 export const Overview = styled.div`
     padding: 20px;
     margin-right: 20px;
+    color: ${props => !props.active ? `rgb(237, 90, 107)` :`rgb(105, 105, 105);`};
     
 `
 export const AboutRestaurant = styled.div`

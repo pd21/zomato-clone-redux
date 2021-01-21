@@ -18,7 +18,7 @@ export const Subtitle = styled.div`
     color: rgb(54, 54, 54);
 `
 export const UserReviewContent = styled.div`
-    border: 2px solid aqua;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     margin-bottom: 20px;
 `
 export const UserProfileContent = styled.div`
@@ -53,11 +53,12 @@ export const ReviewTime = styled.div`
 `
 export const Text = styled.div`
     line-height: 1.5;
-    margin: 5px 0px 3px;
+    margin: 5px 0px 20px;
     color: rgb(105, 105, 105);
     overflow-wrap: break-word;
     font-size: 16px;
 `
 
 export const RatingStars = styled.div`
+    margin-right: 10px;
 `
