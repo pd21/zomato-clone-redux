@@ -18,7 +18,6 @@ class Cuisine extends React.Component{
 
     render(){
         const { cuisines } = this.props
-        console.log('this.props', this.props)
         const cityName = window.location.pathname.split('/')[1]
         return(
             <Main>

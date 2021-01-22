@@ -24,7 +24,6 @@ class RestaurantCollection extends React.Component{
 
 
     render(){
-        console.log('props', this.props)
         const collectionName = window.location.pathname.split('/')[3]
         const collectionData = this.props && this.props.data && this.props.data.collectionData
         return(

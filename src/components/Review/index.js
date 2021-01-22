@@ -19,7 +19,6 @@ import {
 
 class Review extends React.Component{
     render(){
-        console.log('props review', this.props)
         const { restaurantName, reviewData } = this.props
         const  user_reviews  = reviewData && reviewData.user_reviews
         return(

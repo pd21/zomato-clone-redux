@@ -31,7 +31,6 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(showLoaderData())
             axios.get(`${FETCH_RESTAURANTS_REVIEW}${restaurant_id}`)
                 .then(res => {
-                    console.log('data', res.data)
                     dispatch(loadReviewData(res.data))
                     dispatch(hideLoaderData())
                 })
