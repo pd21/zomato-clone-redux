@@ -7,6 +7,7 @@ const mapStateToProps = (state) => {
     return {
         showLoader: state && state.showLoader,
         cuisines: state && state.data && state.data.cuisines,
+        city_id: state && state.data && state.data.locationSuggestions && state.data.locationSuggestions.id
     }
 }
 

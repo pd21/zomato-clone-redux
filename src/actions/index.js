@@ -8,6 +8,11 @@ export const loadRestaurantCollectionData = (value) => ({
     value,
 })
 
+export const loadRestaurantCuisineData = (value) => ({
+    type: 'LOAD_RESTAURANT_CUISINE_DATA',
+    value,
+})
+
 export const loadRestaurantData = (value) => ({
     type: 'LOAD_RESTAURANT_DATA',
     value,

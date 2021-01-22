@@ -9,6 +9,7 @@ export const CollectionTitle = styled.div`
     line-height: 1.2;
     font-weight: 500;
     color: rgb(28, 28, 28);
+    font-family: 'Questrial', sans-serif;
 `
 export const CollectionSubtitleContainer = styled.div`
     display: flex;
@@ -18,6 +19,7 @@ export const CollectionSubtitleContainer = styled.div`
     color: rgb(54, 54, 54);
     font-size: 18px;
     font-family: Okra,Helvetica,sans-serif;
+    font-family: 'Questrial', sans-serif;
 `
 export const CollectionSubtitle = styled.div`
     text-transform: capitalize;
@@ -27,4 +29,5 @@ export const AllCollectionTitle = styled.a`
     text-decoration: none;
     margin-left: auto;
     text-transform: capitalize;
+    font-family: 'Questrial', sans-serif;
 `

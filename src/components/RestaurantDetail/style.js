@@ -12,7 +12,7 @@ export const RestaurantImage = styled.div`
     width: 100%;
     background-image: url('${props => props.imageUrl}');
     background-size: cover;
-    background-position: center 10%;
+    background-position: center 50%;
 
 `
 export const RestaurantTitle = styled.div`

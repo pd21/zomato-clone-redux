@@ -16,7 +16,7 @@ import {
 
 class RestaurantCard extends React.Component{
 
-    handleClickRestaurantCard = (restaurant_id,restaurant_name) => {
+    handleClickRestaurantCard = (restaurant_id) => {
         const cityName = window.location.pathname.split('/')[1]
         this.props.history.push(`/${cityName}/restaurant/${restaurant_id}`)
     }
@@ -28,7 +28,7 @@ class RestaurantCard extends React.Component{
                 {
                     restaurants && restaurants.map(item => {
                         return(
-                            <Main onClick={() => this.handleClickRestaurantCard(item.restaurant.id, item.restaurant.name)}>
+                            <Main onClick={() => this.handleClickRestaurantCard(item.restaurant.id)}>
                                 <RestaurantContent imageUrl={item.restaurant.thumb}>
                                 </RestaurantContent>
                                 <Details>

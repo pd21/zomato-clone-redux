@@ -11,6 +11,7 @@ export const Title = styled.div`
     line-height: 1.2;
     font-weight: 400;
     font-family: Okra,Helvetica,sans-serif;
+    font-family: 'Questrial', sans-serif;
 `
 
 export const EstablishmentContainer = styled.div`
@@ -29,6 +30,8 @@ export const EstablishmentItemContainer = styled.div`
     border: 1px solid rgb(232, 232, 232);
     margin-right: 18px;
     cursor: pointer;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
 
     &:nth-child(3n){
         margin-right: 0px;

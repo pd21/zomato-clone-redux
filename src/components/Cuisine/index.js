@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 
 import {
     EstablishmentContainer,
@@ -8,8 +9,16 @@ import {
 } from './style'
 
 class Cuisine extends React.Component{
+
+    handleClickCard = (cuisinename, cuisineId, cityName) => {
+        const cuisine_name = cuisinename.split(' ').join('-')
+        const city_id = this.props.city_id
+        this.props.history.push(`/${cityName}/${city_id}/cuisine/${cuisine_name}/${cuisineId}`)
+    }
+
     render(){
         const { cuisines } = this.props
+        console.log('this.props', this.props)
         const cityName = window.location.pathname.split('/')[1]
         return(
             <Main>
@@ -18,7 +27,7 @@ class Cuisine extends React.Component{
                 {
                     cuisines && cuisines.map(item => {
                         return(
-                            <EstablishmentItemContainer>
+                            <EstablishmentItemContainer onClick={() => this.handleClickCard(item.cuisine.cuisine_name, item.cuisine.cuisine_id, cityName)}>
                                 {item.cuisine.cuisine_name}
                             </EstablishmentItemContainer>
                         )
@@ -30,4 +39,4 @@ class Cuisine extends React.Component{
     }
 }
 
-export default Cuisine
+export default withRouter(Cuisine)
