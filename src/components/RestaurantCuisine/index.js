@@ -2,6 +2,11 @@ import React from 'react'
 import {
     MainCuisine,
     CuisineContent,
+    Banner,
+    SectionRestaurants,
+    Title,
+    Section,
+    NumberOfRestaurants
 } from './style'
 
 import Navbar from '../Navbar'
@@ -23,7 +28,15 @@ class RestaurantCuisine extends React.Component{
                 <Navbar />
                 {cuisineData && 
                     <CuisineContent>
-                        <RestaurantCard restaurants={cuisineData.restaurants} />
+                        <Banner>
+                            <Section>
+                                <Title>{collectionName}</Title>
+                            <NumberOfRestaurants>{cuisineData.restaurants.length} places (s)</NumberOfRestaurants>
+                            </Section>
+                        </Banner>
+                        <SectionRestaurants>
+                            <RestaurantCard restaurants={cuisineData.restaurants} />
+                        </SectionRestaurants>
                     </CuisineContent>
                 }
             </MainCuisine>
