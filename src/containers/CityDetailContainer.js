@@ -14,9 +14,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getCityData() {
+        getCityData(cityName) {
             dispatch(showLoaderData())
-            const cityName = window.location.pathname.split('/')[1]
+            // const cityName = window.location.pathname.split('/')[1]
             axios.get(`${FETCH_CITY_COLLECTION_CUISINE}${cityName}`)
                 .then(res => {
                     dispatch(loadCityData(res.data))

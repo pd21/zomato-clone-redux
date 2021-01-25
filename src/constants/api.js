@@ -3,3 +3,4 @@ export const FETCH_RESTAURANTS_COLLECTION = 'http://localhost:8000/api/v1/city/c
 export const FETCH_RESTAURANTS_DETAILS = 'http://localhost:8000/api/v1/city/restaurant/'
 export const FETCH_RESTAURANTS_REVIEW = 'http://localhost:8000/api/v1/city/review/'
 export const FETCH_RESTAURANTS_CUISINE = 'http://localhost:8000/api/v1/city/cuisine/'
+export const FETCH_SEARCH_RESULTS = 'http://localhost:8000/api/v1/city/search/'

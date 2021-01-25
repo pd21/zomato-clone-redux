@@ -1,9 +1,18 @@
 import styled from 'styled-components'
 
-export const NavbarContainer = styled.div`
-    width:100%;
-    height: 72px;
-    background-color: transparent;
-    box-shadow: rgb(232, 232, 232) 0px -0.5px 0px inset;
+export const NavbarMain = styled.div`
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    padding: 20px;
+`
 
+export const NavContent = styled.div`
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+`
+export const ImageContainer = styled.div`
+   width: 124px;
+`
+export const Image = styled.img`
+  width: 100%;
 `

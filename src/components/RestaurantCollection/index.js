@@ -10,8 +10,8 @@ import {
     SectionRestaurants
 } from './style';
 
-import Navbar from '../Navbar'
 import RestaurantCard from '../RestaurantCard'
+import NavbarContainer from '../../containers/NavBarContainer'
 
 class RestaurantCollection extends React.Component{
 
@@ -28,7 +28,7 @@ class RestaurantCollection extends React.Component{
         const collectionData = this.props && this.props.data && this.props.data.collectionData
         return(
             <RestaurantCollectionContainer>
-                <Navbar />
+                <NavbarContainer />
                 {collectionData &&
                     <CollectionListContainer>
                         <BannerContainer>

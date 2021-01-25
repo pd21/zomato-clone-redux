@@ -18,7 +18,6 @@ export const CollectionSubtitleContainer = styled.div`
     font-weight: 400;
     color: rgb(54, 54, 54);
     font-size: 18px;
-    font-family: Okra,Helvetica,sans-serif;
     font-family: 'Questrial', sans-serif;
 `
 export const CollectionSubtitle = styled.div`

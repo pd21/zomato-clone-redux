@@ -23,6 +23,16 @@ export const loadReviewData = (value) => ({
     value,
 })
 
+export const changeCity = (value) => ({
+    type: 'CHANGE_CITY',
+    value
+})
+
+export const showSearchData = (value) => ({
+    type: 'SHOW_SEARCH_RESULTS',
+    value,
+})
+
 export const showLoaderData = () => ({
     type: 'SHOW_LOADER'
 })

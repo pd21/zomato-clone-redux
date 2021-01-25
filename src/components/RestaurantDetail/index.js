@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from '../Navbar'
+
+import NavbarContainer from '../../containers/NavBarContainer'
 import Review from '../Review'
 
 import {
@@ -67,7 +68,7 @@ class RestaurantDetail extends React.Component{
         
         return(
             <MainContent>
-                <Navbar />
+                <NavbarContainer />
                 {restaurantData && 
                     <RestaurantContent>
                         <RestaurantImage imageUrl={restaurantData.featured_image}/>

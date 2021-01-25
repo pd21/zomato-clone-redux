@@ -9,7 +9,7 @@ import {
     NumberOfRestaurants
 } from './style'
 
-import Navbar from '../Navbar'
+import NavbarContainer from '../../containers/NavBarContainer'
 import RestaurantCard from '../RestaurantCard'
 
 class RestaurantCuisine extends React.Component{
@@ -25,7 +25,7 @@ class RestaurantCuisine extends React.Component{
         const cuisineData = this.props && this.props.data && this.props.data.cuisineData
         return (
             <MainCuisine>
-                <Navbar />
+                <NavbarContainer />
                 {cuisineData && 
                     <CuisineContent>
                         <Banner>

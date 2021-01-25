@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import  Cuisine from '../components/Cuisine'
 
-import axios from 'axios'
 
 const mapStateToProps = (state) => {
     return {

@@ -36,6 +36,20 @@ export default function(state=getInitialState(), action){
         }
     }
 
+    if (action.type === 'CHANGE_CITY') {
+        return {
+            ...state,
+            currentCity: action.value,
+        }
+    }
+
+    if (action.type === 'SHOW_SEARCH_RESULTS') {
+        return {
+            ...state,
+            data : action.value,
+        }
+    }
+ 
     if(action.type === 'SHOW_LOADER') {
         return {
             ...state,
