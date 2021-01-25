@@ -2,6 +2,7 @@ import React from 'react'
 
 import NavbarContainer from '../../containers/NavBarContainer'
 import Review from '../Review'
+import Loader from '../Loader'
 
 import {
     RestaurantContent,
@@ -63,12 +64,13 @@ class RestaurantDetail extends React.Component{
         const reviewData  = this.props && this.props.data && this.props.data.reviewData
         const restaurantData = this.props && this.props.data && this.props.data.restaurantData
         const cuisines = restaurantData && restaurantData.cuisines
-        
+        const showLoader = this.props.showLoader
         const cuisineArray = cuisines && cuisines.split(' ').join('').split(',')
         
         return(
             <MainContent>
                 <NavbarContainer />
+                {showLoader && <Loader />}
                 {restaurantData && 
                     <RestaurantContent>
                         <RestaurantImage imageUrl={restaurantData.featured_image}/>

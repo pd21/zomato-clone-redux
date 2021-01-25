@@ -12,6 +12,7 @@ import {
 
 import RestaurantCard from '../RestaurantCard'
 import NavbarContainer from '../../containers/NavBarContainer'
+import Loader from '../Loader'
 
 class RestaurantCollection extends React.Component{
 
@@ -24,11 +25,13 @@ class RestaurantCollection extends React.Component{
 
 
     render(){
+        const { showLoader } = this.props
         const collectionName = window.location.pathname.split('/')[3]
         const collectionData = this.props && this.props.data && this.props.data.collectionData
         return(
             <RestaurantCollectionContainer>
                 <NavbarContainer />
+                {showLoader && <Loader />}
                 {collectionData &&
                     <CollectionListContainer>
                         <BannerContainer>

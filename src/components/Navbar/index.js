@@ -1,8 +1,6 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
 
-import SearchBarContainer from '../../containers/SearchBarContainer'
-
 import {
     NavbarMain,
     NavContent,
@@ -18,7 +16,6 @@ class Navbar extends React.Component{
     }
     
     render() {
-        console.log('nav', this.props)
         return (
             <NavbarMain>
                 <NavContent>

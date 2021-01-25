@@ -10,6 +10,7 @@ import {
 
 import RestaurantCard from '../RestaurantCard'
 import NavbarContainer from '../../containers/NavBarContainer'
+import Loader from '../Loader'
 
 class SearchPage extends React.Component{
     constructor(props){
@@ -26,11 +27,13 @@ class SearchPage extends React.Component{
     }
     
     render(){
+        const { showLoader } = this.props
         const searchData = this.props && this.props.data && this.props.data.searchData
         const { search_term } = this.state
         return(
             <MainSearch>
                 <NavbarContainer />
+                {showLoader && <Loader />}
                 {
                     searchData && 
                     <SearchContent>

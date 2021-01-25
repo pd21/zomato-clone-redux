@@ -13,6 +13,7 @@ export const BackgroundContainer = styled.div`
    background-position: left 10% bottom 65%;
    position: relative;
    margin-bottom: 40px;
+   position: relative;
 `
 
 export const TitleContainer = styled.div`

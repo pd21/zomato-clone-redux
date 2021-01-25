@@ -2,6 +2,7 @@ import React from 'react'
 import CollectionContainer from '../../containers/CollectionContainer'
 import CuisineContainer from '../../containers/CuisineContainer'
 import SearchBarContainer from '../../containers/SearchBarContainer'
+import Loader from '../Loader'
 
 import {
     MainContainer,
@@ -30,6 +31,7 @@ class City extends React.Component{
         const cityName = this.props.currentCity
         return (
             <MainContainer>
+                {showLoader && <Loader /> }
                 <BackgroundContainer>
                     <BackgroundOpaqueEffect></BackgroundOpaqueEffect>
                     <TitleContainer>
