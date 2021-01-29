@@ -6,7 +6,7 @@ export const Main = styled.div``
 export const Title = styled.div`
     margin-bottom: 40px;
     text-align: center;
-    color: rgb(54, 54, 54);
+    color: ${props => props.theme.PRIMARY_TEXT_COLOR};
     font-size: 36px;
     line-height: 1.2;
     font-weight: 400;
@@ -34,12 +34,13 @@ export const EstablishmentItemContainer = styled.div`
     padding: 20px 24px;
     border-radius: 0.8px;
     margin-bottom: 15px;
-    background: rgb(255, 255, 255);
+    background: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
     border: 1px solid rgb(232, 232, 232);
     margin-right: 10px;
     cursor: pointer;
     font-family: 'Questrial', sans-serif;
     font-size: 18px;
+    color: ${props => props.theme.TEXT_COLOR };
 
     @media (max-width: 480px){
       height: 54px;

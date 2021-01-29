@@ -40,3 +40,8 @@ export const showLoaderData = () => ({
 export const hideLoaderData = () => ({
     type: 'HIDE_LOADER'
 })
+
+export const switchTheme = (value) => ({
+    type: 'SWITCH_THEME',
+    value,
+})
