@@ -22,6 +22,10 @@ export const RestaurantTitle = styled.div`
     font-weight: 600;
     font-size: 36px;
     font-family: 'Bodoni Moda', serif;
+
+    @media (max-width: 480px){
+      font-size: 20px;
+    }
 `
 export const Locality = styled.div`
     font-size: 16px;
@@ -46,6 +50,10 @@ export const Time = styled.span`
 export const SectionOverview = styled.div`
   display: flex;
   font-size: 18px;
+
+    @media (max-width: 480px){
+      font-size: 16px;
+    }
 `
 
 export const Section = styled.section`
@@ -56,6 +64,11 @@ export const Section = styled.section`
     cursor: pointer;
     font-weight: 600;
     font-family: 'Questrial', sans-serif;
+
+    @media (max-width: 480px){
+      padding-left:10px;
+      padding-right: 10px;
+    }
 `
 export const RestaurantReview = styled.div`
     padding: 20px;
@@ -73,6 +86,12 @@ export const AboutRestaurant = styled.div`
     margin-top: 20px;
     margin-bottom: 80px;
     font-family: 'Questrial', sans-serif;
+
+    @media (max-width: 480px){
+      padding-left:10px;
+      padding-right: 10px;
+      margin-bottom: 40px;
+    }
 `
 export const AboutTitle = styled.div`
     line-height: 1.2;
@@ -80,6 +99,10 @@ export const AboutTitle = styled.div`
     font-size: 24px;
     font-weight: 600;
     font-family: 'Bodoni Moda', serif;
+
+    @media (max-width: 480px){
+      font-size: 20px;
+    }
 `
 export const Title = styled.div`
     line-height: 1.2;
@@ -89,6 +112,10 @@ export const Title = styled.div`
     margin-top: 20px;
     font-family: 'Questrial', sans-serif;
     font-weight: 550;
+
+    @media (max-width: 480px){
+      font-size: 18px;
+    }
 `
 export const Cuisine = styled.div`
     display: flex;
@@ -109,6 +136,10 @@ export const CuisineItem = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media (max-width: 480px){
+      margin-bottom: 5px;
+    }
 `
 export const AverageCost = styled.div`
     margin-top: 10px;
@@ -122,6 +153,9 @@ export const Highlights = styled.div`
     flex-wrap: wrap;
     margin-top: 10px;
 
+     @media (max-width: 480px){
+      width: 100%;
+    }
 `
 export const HighlightInfoItem = styled.div`
     flex: 50%;

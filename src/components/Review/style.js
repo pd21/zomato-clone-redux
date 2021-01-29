@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 export const Main = styled.div`
     margin-top: 20px;
+
+    @media (max-width: 480px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 `
 export const Name = styled.div`
     line-height: 1.2;
@@ -10,6 +15,10 @@ export const Name = styled.div`
     font-size: 24px;
     font-weight: 600;
     font-family: 'Bodoni Moda', serif;
+
+    @media (max-width: 480px){
+      font-size: 20px;
+    }
 `
 export const Subtitle = styled.div`
     margin-top: 10px;

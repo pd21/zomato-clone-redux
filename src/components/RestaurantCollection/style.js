@@ -7,6 +7,10 @@ export const CollectionListContainer = styled.div`
     max-width: 1100px;
     margin: 0 auto;
     padding: 70px 0px;
+
+    @media (max-width: 480px){
+      padding:30px 0;
+    }
 `
 export const BannerContainer = styled.div`
     position: relative;
@@ -19,6 +23,9 @@ export const BannerContainer = styled.div`
     height: 320px;
     border-radius: 5px;
 
+    @media (max-width: 480px){
+      border-radius: 0px;
+    }
 `
 export const BannerOpaqueEffect = styled.div`
     position: absolute;
@@ -33,10 +40,14 @@ export const Section = styled.div`
     padding:0 20px;
 `
 export const BannerTitle = styled.div`
-    font-size: 52px;;
+    font-size: 52px;
     line-height: 1.2;
     font-weight: 500;
     font-family: 'Bodoni Moda', serif;
+
+    @media (max-width: 480px){
+      font-size: 28px;
+    }
 `
 export const BannerDescription = styled.div`
     font-size: 22px;
@@ -54,4 +65,8 @@ export const ResultsFound = styled.div`
 
 export const SectionRestaurants = styled.div`
     margin-top: 55px;
+
+    @media (max-width: 480px){
+      margin-top: 35px;
+    }
 `

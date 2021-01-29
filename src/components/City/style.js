@@ -27,6 +27,11 @@ export const ImageContainer =  styled.div`
   width: 300px;
   height: 60px;
   margin: 0 auto;
+
+  @media (max-width: 480px){
+      width: 250px;
+      height: 47px;
+   }
 `
 export const Image = styled.img`
   width: 100%;
@@ -37,6 +42,10 @@ export const Title = styled.div`
    text-align: center;
    font-size: 36px;
    text-transform: capitalize;
+
+   @media (max-width: 480px){
+      font-size: 20px;
+   }
 `
 
 export const SubContainer = styled.div`

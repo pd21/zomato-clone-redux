@@ -4,6 +4,10 @@ export const RestaurantCardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    @media (max-width: 480px){
+      justify-content: space-around;
+    }
 `
 
 export const RestaurantContent = styled.div`
@@ -25,6 +29,10 @@ export const Main = styled.div`
     margin-bottom: 30px;
     width: 261px;
     font-family: 'Questrial', sans-serif;
+
+    @media (max-width: 480px){
+      margin-right: 0px;
+    }
 `
 
 export const Details = styled.div`

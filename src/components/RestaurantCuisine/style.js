@@ -7,6 +7,10 @@ export const CuisineContent = styled.div`
     max-width: 1100px;
     margin: 0 auto;
     padding: 70px 0;
+
+    @media (max-width: 480px){
+      padding:30px 0;
+    }
 `
 export const Banner = styled.div`
     position: relative;
@@ -18,9 +22,16 @@ export const Banner = styled.div`
     max-width: 100%;
     height: 320px;
     border-radius: 5px;
+
+    @media (max-width: 480px){
+      border-radius: 0px;
+    }
 `
 export const SectionRestaurants = styled.div`
     margin-top: 55px;
+    @media (max-width: 480px){
+      margin-top: 35px;
+    }
 `
 export const Section = styled.div`
     bottom: 0px;

@@ -12,6 +12,10 @@ export const Title = styled.div`
     font-weight: 400;
     font-family: Okra,Helvetica,sans-serif;
     font-family: 'Questrial', sans-serif;
+
+    @media (max-width: 480px){
+      font-size: 20px;
+    }
 `
 
 export const EstablishmentContainer = styled.div`
@@ -19,6 +23,10 @@ export const EstablishmentContainer = styled.div`
     flex-wrap: wrap;
     width: 100%;
     padding-bottom: 100px;
+
+    @media (max-width: 480px){
+      justify-content: center;
+    }
 `
 export const EstablishmentItemContainer = styled.div`
     width: 353px;
@@ -28,12 +36,15 @@ export const EstablishmentItemContainer = styled.div`
     margin-bottom: 15px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(232, 232, 232);
-    margin-right: 18px;
+    margin-right: 10px;
     cursor: pointer;
     font-family: 'Questrial', sans-serif;
     font-size: 18px;
 
-    &:nth-child(3n){
-        margin-right: 0px;
+    @media (max-width: 480px){
+      height: 54px;
+      width:100%;
+      margin-right:15px;
+      margin-left:15px;
     }
 `

@@ -5,6 +5,10 @@ export const CardContainer = styled.div`
     margin-top: 30px;
     flex-wrap: wrap;
     width: 100%;
+
+   @media (max-width: 480px){
+        justify-content: space-around;
+    }
 `
 
 export const CardItemContainer = styled.div`
@@ -19,6 +23,11 @@ export const CardItemContainer = styled.div`
 
     &:last-child {
         margin: 0px 0px 20px 0px;
+    }
+
+    @media (max-width: 480px){
+        width: 48%;
+        margin-right:0px;
     }
 `
 export const CardOpaqueEffect = styled.div`
@@ -38,4 +47,8 @@ export const CardTitle = styled.div`
     font-size: 20px;
     font-weight: 300;
     font-family: Okra,Helvetica,sans-serif;
+
+    @media (max-width: 480px){
+      font-size: 12px;
+   }
 `
