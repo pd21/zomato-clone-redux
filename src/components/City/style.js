@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const MainContainer = styled.div`
+   background: ${props => props.theme.PRIMARY_BACKGROUND_COLOR}
 `
 export const BackgroundContainer = styled.div`
    width: 100%;
@@ -24,11 +25,11 @@ export const TitleContainer = styled.div`
    color: #fff;
 ` 
 export const ImageContainer =  styled.div`
-  width: 300px;
-  height: 60px;
-  margin: 0 auto;
+   width: 300px;
+   height: 60px;
+   margin: 0 auto;
 
-  @media (max-width: 480px){
+   @media (max-width: 480px){
       width: 250px;
       height: 47px;
    }
@@ -49,15 +50,21 @@ export const Title = styled.div`
 `
 
 export const SubContainer = styled.div`
-    position: relative;
-    margin: 0 auto;
-    max-width: 1100px;
-    height:800px;
+   position: relative;
+   margin: 0 auto;
+   max-width: 1100px;
 `
 
 export const BackgroundOpaqueEffect = styled.div`
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0,0,0,0.4);
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background: rgba(0,0,0,0.4);
+`
+
+export const SwitchTheme = styled.div`
+   color: #fff;
+   position: absolute;
+   right: 20px;
+   top: 20px;
 `

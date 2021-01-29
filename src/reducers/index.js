@@ -64,5 +64,12 @@ export default function(state=getInitialState(), action){
         }
     }
 
+    if (action.type === 'SWITCH_THEME') {
+        return {
+            ...state,
+            theme: action.value,
+        }
+    }
+
     return state
 }

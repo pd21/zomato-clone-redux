@@ -13,7 +13,7 @@ export const CollectionTitle = styled.div`
     font-size: 36px;
     line-height: 1.2;
     font-weight: 500;
-    color: rgb(28, 28, 28);
+    color: ${props => props.theme.PRIMARY_TEXT_COLOR};
     font-family: 'Questrial', sans-serif;
 
     @media (max-width: 480px){
@@ -25,7 +25,7 @@ export const CollectionSubtitleContainer = styled.div`
     margin-top: 4px;
     line-height: 1.4;
     font-weight: 400;
-    color: rgb(54, 54, 54);
+    color: ${props => props.theme.SECONDARY_TEXT_COLOR};
     font-size: 18px;
     font-family: 'Questrial', sans-serif;
 

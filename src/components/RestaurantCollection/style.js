@@ -48,6 +48,8 @@ export const BannerTitle = styled.div`
     @media (max-width: 480px){
       font-size: 28px;
     }
+
+    
 `
 export const BannerDescription = styled.div`
     font-size: 22px;

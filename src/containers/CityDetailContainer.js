@@ -1,7 +1,7 @@
 import { connect }  from 'react-redux'
 import axios from 'axios'
 import City from '../components/City/City'
-import { loadCityData, showLoaderData, hideLoaderData } from '../actions'
+import { loadCityData, switchTheme, showLoaderData, hideLoaderData } from '../actions'
 
 
 import {
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getCityData(cityName) {
+        getCityData: (cityName) => {
             dispatch(showLoaderData())
             // const cityName = window.location.pathname.split('/')[1]
             axios.get(`${FETCH_CITY_COLLECTION_CUISINE}${cityName}`)
@@ -26,7 +26,9 @@ const mapDispatchToProps = (dispatch) => {
                 .catch(err=>{
                     console.log('oops err', err)
                 })
-  
+        },
+        changeTheme: (theme) => {
+            dispatch(switchTheme(theme))
         }
     }
 }
