@@ -1,4 +1,6 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
+
 import { 
     RestaurantCollectionContainer,
     CollectionListContainer,
@@ -25,28 +27,30 @@ class RestaurantCollection extends React.Component{
 
 
     render(){
-        const { showLoader } = this.props
+        const { showLoader, theme } = this.props
         const collectionName = window.location.pathname.split('/')[3]
         const collectionData = this.props && this.props.data && this.props.data.collectionData
         return(
-            <RestaurantCollectionContainer>
-                <NavbarContainer />
-                {showLoader && <Loader />}
-                {collectionData &&
-                    <CollectionListContainer>
-                        <BannerContainer>
-                            <BannerOpaqueEffect></BannerOpaqueEffect>
-                            <Section>
-                                <BannerTitle>{collectionName}</BannerTitle>
-                                <ResultsFound>{collectionData.restaurants.length} places (s)</ResultsFound>
-                            </Section>
-                        </BannerContainer>
-                        <SectionRestaurants>
-                        <RestaurantCard restaurants={collectionData.restaurants} />
-                        </SectionRestaurants>
-                    </CollectionListContainer>
-                }
-            </RestaurantCollectionContainer>
+            <ThemeProvider theme={theme}>
+                <RestaurantCollectionContainer>
+                    <NavbarContainer />
+                    {showLoader && <Loader />}
+                    {collectionData &&
+                        <CollectionListContainer>
+                            <BannerContainer>
+                                <BannerOpaqueEffect></BannerOpaqueEffect>
+                                <Section>
+                                    <BannerTitle>{collectionName}</BannerTitle>
+                                    <ResultsFound>{collectionData.restaurants.length} places (s)</ResultsFound>
+                                </Section>
+                            </BannerContainer>
+                            <SectionRestaurants>
+                            <RestaurantCard restaurants={collectionData.restaurants} />
+                            </SectionRestaurants>
+                        </CollectionListContainer>
+                    }
+                </RestaurantCollectionContainer>
+            </ThemeProvider>
         )
     }
 }

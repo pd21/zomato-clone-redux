@@ -18,7 +18,8 @@ export const RestaurantContent = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid;
+    border-color: ${props => props.theme.mode === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)'};
 
     &:nth-child(4n){
         margin-right: 0px;
@@ -48,12 +49,13 @@ export const Title = styled.a`
     display: inline;
     font-size: 18px;
     line-height: 1.5;
-    color: rgb(28, 28, 28);
+    color: ${props => props.theme.mode === 'dark'? 'rgba(255,255,255,0.8)':'rgb(28,28,28)'};
     font-weight: 500;
 `
 export const Rating = styled.div`
     font-weight: 400;
     margin-top: 5px;
+    color: ${props => props.theme.TEXT_COLOR };
 `
 export const NumberOfRating = styled.span`
     font-size: 14px;
@@ -75,5 +77,5 @@ export const Cuisines = styled.div`
 `
 export const CardRating = styled.i`
     margin-right: 8px;
-    color: rgb(237, 90, 107);
+    color: rgb(245,112,130);
 `

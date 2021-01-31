@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const RestaurantCollectionContainer = styled.div`
+    background: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
 `
 
 export const CollectionListContainer = styled.div`

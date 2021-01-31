@@ -1,4 +1,6 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
+
 import {
     MainCuisine,
     CuisineContent,
@@ -22,30 +24,29 @@ class RestaurantCuisine extends React.Component{
     }
 
     render(){
-        const showLoader = this.props.showLoader
+        const {showLoader,theme} = this.props
         const collectionName = window.location.pathname.split('/')[4]
         const cuisineData = this.props && this.props.data && this.props.data.cuisineData
-
-        console.log('props showLoader', this.props.showLoader)
-
         return (
-            <MainCuisine>
-                <NavbarContainer />
-                {showLoader && <Loader />}
-                {cuisineData && 
-                    <CuisineContent>
-                        <Banner>
-                            <Section>
-                                <Title>{collectionName}</Title>
-                            <NumberOfRestaurants>{cuisineData.restaurants.length} places (s)</NumberOfRestaurants>
-                            </Section>
-                        </Banner>
-                        <SectionRestaurants>
-                            <RestaurantCard restaurants={cuisineData.restaurants} />
-                        </SectionRestaurants>
-                    </CuisineContent>
-                }
-            </MainCuisine>
+            <ThemeProvider theme={theme}>
+                <MainCuisine>
+                    <NavbarContainer />
+                    {showLoader && <Loader />}
+                    {cuisineData && 
+                        <CuisineContent>
+                            <Banner>
+                                <Section>
+                                    <Title>{collectionName}</Title>
+                                <NumberOfRestaurants>{cuisineData.restaurants.length} places (s)</NumberOfRestaurants>
+                                </Section>
+                            </Banner>
+                            <SectionRestaurants>
+                                <RestaurantCard restaurants={cuisineData.restaurants} />
+                            </SectionRestaurants>
+                        </CuisineContent>
+                    }
+                </MainCuisine>
+            </ThemeProvider>
         )
     }
 

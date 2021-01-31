@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const MainSearch = styled.div``
+export const MainSearch = styled.div`
+    background: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
+`
 
 export const SearchContent = styled.div`
     max-width: 1100px;
@@ -14,7 +16,7 @@ export const SearchContent = styled.div`
 `
 export const Title = styled.div`
     font-size: 32px;
-    color: rgba(0,0,0,0.8);
+    color: ${props => props.theme.TEXT_COLOR};
     font-family: 'Questrial', sans-serif;
 
     @media (max-width: 480px){
@@ -24,7 +26,7 @@ export const Title = styled.div`
 `
 export const Subtitle = styled.div`
     font-size: 20px;
-    color: rgba(0,0,0,0.4);
+    color: ${props => props.theme.SECONDARY_TEXT_COLOR};
     font-family: 'Questrial', sans-serif;
     margin-top: 10px;
 
