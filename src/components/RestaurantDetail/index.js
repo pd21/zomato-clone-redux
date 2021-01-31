@@ -3,6 +3,7 @@ import React from 'react'
 import NavbarContainer from '../../containers/NavBarContainer'
 import Review from '../Review'
 import Loader from '../Loader'
+import { ThemeProvider } from 'styled-components'
 
 import {
     RestaurantContent,
@@ -64,10 +65,11 @@ class RestaurantDetail extends React.Component{
         const reviewData  = this.props && this.props.data && this.props.data.reviewData
         const restaurantData = this.props && this.props.data && this.props.data.restaurantData
         const cuisines = restaurantData && restaurantData.cuisines
-        const showLoader = this.props.showLoader
+        const { showLoader, theme } = this.props
         const cuisineArray = cuisines && cuisines.split(' ').join('').split(',')
         
         return(
+            <ThemeProvider theme={theme}>
             <MainContent>
                 <NavbarContainer />
                 {showLoader && <Loader />}
@@ -147,6 +149,7 @@ class RestaurantDetail extends React.Component{
                     </RestaurantContent>
                 }
             </MainContent>
+            </ThemeProvider>
             
         )
     }

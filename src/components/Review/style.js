@@ -10,7 +10,7 @@ export const Main = styled.div`
 `
 export const Name = styled.div`
     line-height: 1.2;
-    color: rgb(28, 28, 28);
+    color: ${props => props.theme.mode === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgb(28,28,28)'};
     margin: 0px;
     font-size: 24px;
     font-weight: 600;
@@ -45,7 +45,7 @@ export const UserProfilePicture = styled.div`
 export const UserName = styled.div`
     line-height: 44px;
     margin-left: 10px;
-    color: rgb(54, 54, 54);
+    color: ${props => props.theme.mode === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgb(54,54,54)'};
     font-family: 'Questrial', sans-serif;
 `
 export const Star = styled.div`

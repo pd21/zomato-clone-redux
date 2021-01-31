@@ -8,6 +8,7 @@ const mapStateToProps = (state) => {
         cityId: state && state.data && state.data.locationSuggestions && state.data.locationSuggestions.id,
         collections: state && state.data && state.data.collections,
         currentCity: state && state.currentCity,
+        theme: state && state.theme,
     }
 }
 

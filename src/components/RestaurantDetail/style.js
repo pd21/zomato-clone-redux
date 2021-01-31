@@ -5,7 +5,9 @@ export const RestaurantContent = styled.div`
     margin: 0 auto;
     padding: 40px 0px;
 `
-export const MainContent = styled.div``
+export const MainContent = styled.div`
+    background: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
+`
 
 export const RestaurantImage = styled.div`
     height: 470px;
@@ -17,7 +19,7 @@ export const RestaurantImage = styled.div`
 `
 export const RestaurantTitle = styled.div`
     line-height: 1.2;
-    color: rgb(28, 28, 28);
+    color: ${props => props.theme.mode === 'dark'?'rgba(255,255,255,0.7)':'rgb(28,28,28)'};
     margin-top: 10px;
     font-weight: 600;
     font-size: 36px;
@@ -60,7 +62,7 @@ export const Section = styled.section`
     position: sticky;
     border-bottom: 2px solid rgb(237, 90, 107,0.2); 
     top:0px;
-    background-color: #fff;
+    background: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
     cursor: pointer;
     font-weight: 600;
     font-family: 'Questrial', sans-serif;
@@ -99,6 +101,7 @@ export const AboutTitle = styled.div`
     font-size: 24px;
     font-weight: 600;
     font-family: 'Bodoni Moda', serif;
+    color: ${props => props.theme.mode === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgb(28,28,28)'};
 
     @media (max-width: 480px){
       font-size: 20px;
@@ -107,7 +110,7 @@ export const AboutTitle = styled.div`
 export const Title = styled.div`
     line-height: 1.2;
     font-weight: 400;
-    color: rgb(28, 28, 28);
+     color: ${props => props.theme.mode === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgb(28,28,28)'};
     font-size: 22px;
     margin-top: 20px;
     font-family: 'Questrial', sans-serif;
@@ -166,7 +169,7 @@ export const HighlightInfoItem = styled.div`
 `
 export const InfoIcon = styled.i`
     margin-right : 10px;
-    color: rgb(237, 90, 107);
+    color: rgb(245,112,130);
 `
 export const Subtitle = styled.div`
     margin-top: 10px;

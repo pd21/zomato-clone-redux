@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
 import {
     MainSearch,
@@ -27,24 +28,26 @@ class SearchPage extends React.Component{
     }
     
     render(){
-        const { showLoader } = this.props
+        const { showLoader,theme } = this.props
         const searchData = this.props && this.props.data && this.props.data.searchData
         const { search_term } = this.state
         return(
-            <MainSearch>
-                <NavbarContainer />
-                {showLoader && <Loader />}
-                {
-                    searchData && 
-                    <SearchContent>
-                        <Title>Showing search results for {search_term}</Title>
-                        <Subtitle>{searchData.results_shown} Place(s)</Subtitle>
-                        <SectionRestaurants>
-                            <RestaurantCard restaurants={searchData.restaurants}/>
-                        </SectionRestaurants>
-                    </SearchContent>
-                }
-            </MainSearch>
+            <ThemeProvider theme={theme}>
+                <MainSearch>
+                    <NavbarContainer />
+                    {showLoader && <Loader />}
+                    {
+                        searchData && 
+                        <SearchContent>
+                            <Title>Showing search results for {search_term}</Title>
+                            <Subtitle>{searchData.results_shown} Place(s)</Subtitle>
+                            <SectionRestaurants>
+                                <RestaurantCard restaurants={searchData.restaurants}/>
+                            </SectionRestaurants>
+                        </SearchContent>
+                    }
+                </MainSearch>
+            </ThemeProvider>
         )
     }
 }
